@@ -1,0 +1,59 @@
+RStudio Intro - IASSIST Reproducible R Workshop
+========================================================
+
+### Installation
+
+Requirements for the course:
+
+R - 
+Rstudio - 
+Git 
+
+If you don't want to install this on your machine, we've installed a version of RStudio server on our server.  Harrison can give you an account. 
+
+### Quick note about R (more to come later)
+
+R is an interactive statistical computing programming laguage in the read–eval–print loop (REPL) style where: 
+
+* read user types command in console prompt
+* the command is **eval**uated
+* the result is printed to the console 
+* and loop expresses the iterative and exploratory nature of how someone uses r in practice
+
+### Setups for RStudio
+
+We need to grab some rcode for this section, so let's create a new project Project>Create Project>Version Control
+
+repo url: git@github.com:uc-data-services/r-reproducible-research.git
+director: r-iassist  (can be whatever you want)
+folder: leave as is or navigate to desktop or my docs
+
+screenshot?
+
+things to show for step one: 
+1. setting working director
+2. show git menu in workspace area
+3. show files
+
+
+## Step 2 - open r file run code
+
+1. open file x 
+2. notice source edit area, hihglight line and run
+3. poss run somethign that requires a pakcage not installed, install and run again
+4. ways to get help
+5. show tab and tooltip 
+
+
+## Plots area and typing into console 
+
+```{r}
+summary(mtcars)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(mtcars$mgp, mtcars$wt)
+```
+
