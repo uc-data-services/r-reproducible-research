@@ -1,21 +1,32 @@
 #Reproducible research with R - IASSIST 2013
 
-#you can uncomment and put your own 
+## Exercise 1  - Creating a project and pulling files from github
+#you can uncomment and put your own file path 
 #setwd("~/Dropbox/iassist_rworkshop/r-iassist")
 
+## Exercise 2 - Open an R source file & run code from the source/console.
+1+1
+#the seq function creates a sequence vector by an increment
+v <- seq(1,100,by=5)
+
+## Exercise 3 - Datasets in R and finding help
 #pulls up a list of the datasets installed with R 
 data()
 
-#use class to see what type of object the mtcars is
-class(mtcars)
-
-#using the rich R help 
+# getting help in R using the "?" operator
 ?mtcars
 ?summary
 
-#assign mtcars to a variable so we can work with it using <- as the assignment operator 
+# Exercise 4 - Running some basic descriptive stats and loading a package.
+#assign the mtcars data set to mt
 mt <- mtcars
-
 summary(mt)
+#install the psych package and run 
 describe(mt)
-sd(mt$mpg)
+
+## Exercise 5 -  Plotting 
+# there are many arguments that can alter the plot incl. color, labels, breaks, etc. see ?hist
+hist(mt$mpg)
+
+#simple scatter plot of mpg and car weight
+plot(mt$mpg, mt$wt)
