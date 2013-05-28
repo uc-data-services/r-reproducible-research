@@ -36,7 +36,7 @@ R is an interactive statistical computing programming environment in the read–
 
 ## Exercise 1  - Creating a project and pulling files from github
 
-We need to pull in some rcode for this part of the workshop, so let's create a new project by Project>Create Project>Version Control
+We need to pull in some R code for this part of the workshop, so let's create a new project by Project>Create Project>Version Control
 
 **repo url**: git@github.com:uc-data-services/r-reproducible-research.git  
 **directory**: r-iassist  (can be whatever you want)  
@@ -44,14 +44,14 @@ We need to pull in some rcode for this part of the workshop, so let's create a n
 
 ![Git clone](images/gitclone.png)
 
-Things to notice for step one:  
+Things to notice from step one:  
 
-1. The files browser (lower right) allows you to set working directory. Notice that when you do an action in one of the windows the command is reflected to the console. This is helpful when you want to build up a script that will contain all of your configuration settings.
-2. A git menu in workspace tab shows up after a git clone giving you a way to interface with a git repository.
+1. The files browser (lower right) allows you to set working directory. Notice that when you do an action in one of the windows the command is reflected to the console. This is helpful when you want to build up a script that will set up the R environment.
+2. A git menu in workspace tab appears after a git clone giving you a way to interface with a git repository.
 
 ## Exercise 2 - Open an R source file & run code from the source/console.
 
-Open up the rstudio.R file in your file browser. Highlight the following lines and use the run button to run the code in the console. Let's get started simple:
+Open up the rstudio.R file in your file browser. Highlight and run the code in exercise 1 (use the run button or ctrl-enter). 
 
 
 ```r
@@ -83,18 +83,7 @@ data()
 ```
 
 
-Look for more information on the mtcars dataset. There are two ways in RStudio to access help about functions, packages, and datasets. 
-
-
-```r
-`?`(mtcars)
-```
-
-
-
-```r
-`?`(summary)
-```
+Look for more information on the mtcars dataset. Find the two ways in RStudio to access help about functions, packages, and datasets. 
 
 
 # Exercise 4 - Running some basic descriptive stats and loading a package.
@@ -109,7 +98,7 @@ mt <- mtcars
 ```
 
 
-You can view the dataframe by typing ***View(mt)*** in the console or clicking on ***mt*** in the Workspace area.
+This adds the mt dataframe to your workspace. You can view the dataframe by typing ***View(mt)*** in the console or clicking on ***mt*** in the Workspace area. Now run a summary of mt. 
 
 
 ```r
@@ -141,7 +130,7 @@ summary(mt)
 ```
 
 
-But summary doesn't include standard deviation or range as part of the output. Let's install an R contributed package to get a better descriptive stats output. Go ahead and install **psych** module from the 'Package' tab in the lower right pane. Make sure its checked off after you install and then run its **describe** function on mt.
+But notice that summary doesn't include standard deviation or range as part of the output. Let's install an R contributed package to get a better descriptive stats output. Go ahead and install **psych** module from the 'Package' tab in the lower right pane. Make sure its checked off after you install and then run its **describe()** function on mt.
 
 Note the difference with the output.
 
@@ -154,7 +143,7 @@ The basic R plotting package doesn't produce beautiful graphs, but you can easil
 hist(mt$mpg)
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
 
 
@@ -162,6 +151,6 @@ hist(mt$mpg)
 plot(mt$mpg, mt$wt)
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
 
 Run a boxplot on **mt**. 
